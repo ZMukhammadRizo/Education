@@ -1,8 +1,10 @@
+import Homes from "../../components/Homes";
+
 function Home() {
-    return (
-        <div>
-            <h1>Home</h1>
-      </div>
-    )
+  return (
+    <div>
+      <Homes />
+    </div>
+  );
 }
-export default Home
+export default Home;

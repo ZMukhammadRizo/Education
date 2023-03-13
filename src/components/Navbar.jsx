@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom';
-import './Navbar.css'
+import { Link, useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="header">
-        <div className="logo">Learning</div>
+        <div className="logo" onClick={() => navigate("/")}>
+          Learning
+        </div>
         <ul>
           <li>
             <Link to="/home">Home</Link>
@@ -22,12 +25,11 @@ function Navbar() {
         </ul>
         <div className="nav-btn">
           <button>Log In</button>
-           <button>Sign Up</button>
+          <button>Sign Up</button>
         </div>
       </div>
     </>
   );
 }
-
 
 export default Navbar;
